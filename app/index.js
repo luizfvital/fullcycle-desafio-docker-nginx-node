@@ -13,7 +13,8 @@ const config = {
 
 const connection = mysql.createConnection(config)
 
-const create_table_query = 'CREATE TABLE people (id int not null auto_increment primary key, name varcharVARCHAR(255)'
+//Cria a tabela
+const create_table_query = 'CREATE TABLE people(name VARCHAR(255)'
 connection.query(create_table_query)
 
 const insert_name_query = `INSERT INTO people(name) VALUES('Luiz Fernando')`
