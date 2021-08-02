@@ -11,6 +11,7 @@ services:
       - "3000:3000"
     volumes: 
       - ./app:/usr/src/app
+      - /app/node_modules
     networks:
         - node-network 
     tty: true
@@ -31,7 +32,7 @@ services:
     networks:
       - node-network
 
-  nginx:
+  nginx:  
     image: nginx:1.17
     container_name: nginx
     networks:
