@@ -13,8 +13,7 @@ const config = {
 
 const connection = mysql.createConnection(config)
 
-//Cria a tabela
-const create_table_query = `CREATE TABLE people ('name' VARCHAR(255)`
+const create_table_query = 'CREATE TABLE people (name VARCHAR(255))'
 connection.query(create_table_query)
 
 const insert_name_query = `INSERT INTO people(name) VALUES('Luiz Fernando')`
